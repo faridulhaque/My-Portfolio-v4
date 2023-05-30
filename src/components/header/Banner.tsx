@@ -3,6 +3,7 @@ import React from "react";
 import {AiOutlineArrowDown} from "react-icons/ai"
 
 const Banner = () => {
+    
   return (
     <div className="relative text-[#8AC7FF] w-full h-[calc(100vh-80px)] flex flex-col items-center justify-center">
       <h1 className=" text-[80px] uppercase font-bold">
