@@ -3,19 +3,23 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
     scroll-behavior: smooth !important;
 }
 
-.my-logo{
+.my-logo {
     font-family: 'Great Vibes', cursive;
 }
 
-header{
+header {
     height: 100vh;
     width: 100%;
     background-image: url(../assets/banner.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.bg-light-black {
+    background-color: rgba(0, 0, 0, 0.5);
 }
