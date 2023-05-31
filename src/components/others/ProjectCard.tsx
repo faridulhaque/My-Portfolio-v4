@@ -1,9 +1,13 @@
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
+import ProjectDialog from "./ProjectDialog";
 
 const ProjectCard = ({ data }: any) => {
+  const [isOpen, setOpen] = useState(false);
+
+  console.log(isOpen)
   return (
-    <div className="group w-full h-[300px] overflow-hidden relative cursor-pointer">
+    <div className="group w-full h-[300px] overflow-hidden relative ">
       <Image
         src={data?.img}
         width={400}
@@ -20,10 +24,16 @@ const ProjectCard = ({ data }: any) => {
             {data.description}
           </p>
         </div>
-        <button className="btn border-2 border-white text-white absolute bottom-4 px-1 py-1 right-2 w-1/5 rounded-sm capitalize hover:bg-white hover:text-black">
+        <button
+          onClick={() => setOpen(true)}
+          className="cursor-pointer btn border-2 border-white text-white absolute bottom-4 px-1 py-1 right-2 w-1/5 rounded-sm capitalize hover:bg-white hover:text-black"
+        >
           see more
         </button>
       </div>
+      {isOpen && (
+       <ProjectDialog setOpen={setOpen} data={data}></ProjectDialog>
+      )}
     </div>
   );
 };
