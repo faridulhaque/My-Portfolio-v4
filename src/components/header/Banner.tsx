@@ -14,7 +14,7 @@ const Banner = () => {
         with the skills to create robust and dynamic web applications that
         seamlessly integrate MongoDB, Express.js, React, and Node.js.
       </p>
-      <Link href="#" className="btn bg-[#8AC7FF] px-5 py-3 text-black rounded-md mt-5">Download Resume</Link>
+      <Link href="#" className="btn bg-[#8AC7FF] px-5 py-3 text-[#333333] rounded-md mt-5">Download Resume</Link>
 
       <span className="absolute bottom-10 animate-bounce"><AiOutlineArrowDown className="text-white text-3xl"></AiOutlineArrowDown></span>
     </div>

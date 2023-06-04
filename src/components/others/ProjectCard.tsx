@@ -5,7 +5,6 @@ import ProjectDialog from "./ProjectDialog";
 const ProjectCard = ({ data }: any) => {
   const [isOpen, setOpen] = useState(false);
 
-  console.log(isOpen)
   return (
     <div className="group w-full h-[300px] overflow-hidden relative ">
       <Image
