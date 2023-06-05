@@ -9,6 +9,7 @@ import About from "@/components/others/About";
 import Footer from "@/components/footer/Footer";
 
 import { useState, useEffect } from "react";
+import AppBar from "@/components/header/AppBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,8 +35,10 @@ export default function Home() {
 
   return (
     <div className="relative w-full">
-      <header className="relative">
+      <header className="relative w-full h-screen">
         <Navbar></Navbar>
+        {/* navbar is for  larger devices and appBar is for smaller devices*/}
+        <AppBar></AppBar>
         <Banner></Banner>
       </header>
 

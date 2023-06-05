@@ -6,7 +6,7 @@ const ProjectCard = ({ data }: any) => {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <div className="group w-full h-[300px] overflow-hidden relative ">
+    <div className="group w-full xl:h-[300px] lg:h-[300px] md:h-[300px] sm:h-[275px] xs:h-[275px] xxs:h-[275px]  overflow-hidden relative ">
       <Image
         src={data?.img}
         width={400}
@@ -25,14 +25,12 @@ const ProjectCard = ({ data }: any) => {
         </div>
         <button
           onClick={() => setOpen(true)}
-          className="cursor-pointer btn border-2 border-white text-white absolute bottom-4 px-1 py-1 right-2 w-1/5 rounded-sm capitalize hover:bg-white hover:text-black"
+          className="cursor-pointer btn border-2 border-white text-white absolute left-0 right-0 bottom-4 m-auto px-1 py-1 xl:w-1/5 lg:w-1/5 md:w-2/5 sm:w-2/5 xs:w-2/5 xxs:w-3/5 rounded-sm capitalize hover:bg-white hover:text-black"
         >
           see more
         </button>
       </div>
-      {isOpen && (
-       <ProjectDialog setOpen={setOpen} data={data}></ProjectDialog>
-      )}
+      {isOpen && <ProjectDialog setOpen={setOpen} data={data}></ProjectDialog>}
     </div>
   );
 };

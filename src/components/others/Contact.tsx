@@ -8,8 +8,8 @@ const Contact = () => {
       id="contact"
       className="text-white h-auto w-full m-auto bg-[#333333] py-20"
     >
-      <div className="m-auto w-11/12 flex items-start">
-        <div className="w-2/4">
+      <div className="mx-auto w-11/12 xl:flex lg:flex md:flex sm:block xs:block xxs:block items-start">
+        <div className="xl:w-2/4 lg:w-2/4 md:w-2/4 sm:w-11/12 xs:w-11/12 xxs:w-11/12 mx-auto">
           <h2 className="text-4xl mb-5">Contact Me</h2>
           <p className="text-xl">
             Get in touch with me by filling out this form regarding any inquiry
@@ -37,9 +37,9 @@ const Contact = () => {
           </ul>
         </div>
 
-        <form className="w-2/4 flex flex-col">
+        <form className="xl:w-2/4 lg:w-2/4 md:w-2/4 sm:w-11/12 xs:w-11/12 xxs:w-11/12 flex flex-col mx-auto sm:mt-10 xs:mt-10 xxs:mt-10">
           {/* input fields wrapper started*/}
-          <div className="w-full grid grid-cols-2 gap-4 mb-3">
+          <div className="w-full grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 xs:grid-cols-1 xxs:grid-cols-1 gap-4 mb-3">
             <div>
               <label className="text-md uppercase" htmlFor="">
                 name

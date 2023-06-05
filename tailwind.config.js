@@ -15,6 +15,18 @@ module.exports = {
   },
   theme: {
     extend: {},
+    screens: {
+      'xxs': '0',
+      'xs': '600px',
+
+      'sm': '740px',
+
+      'md': '960px',
+
+      'lg': '1280px',
+      'xl': '1439px'
+
+    },
   },
   plugins: [],
 }
