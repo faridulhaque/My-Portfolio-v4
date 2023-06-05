@@ -52,7 +52,7 @@ export default function Home() {
         onClick={() => {
           window.scrollTo(0, 0);
         }}
-        className={`fixed flex items-center justify-center bottom-5 right-5 text-white bg-[#4A8CB3] px-3 py-2 shadow-lg rounded-md text-3xl ${
+        className={`fixed flex items-center justify-center bottom-5 right-5 text-white bg-[#4A8CB3] px-3 py-2 shadow-lg rounded-md text-3xl opacity-3 ${
           showScroll ? "visible" : "hidden"
         }`}
       >
