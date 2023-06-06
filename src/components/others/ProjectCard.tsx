@@ -15,7 +15,7 @@ const ProjectCard = ({ data }: any) => {
         className="w-full h-full shadow-lg rounded-lg group-hover:scale-125 transition-all ease-in-out duration-500 "
       />
       <div className="absolute bg-light-black top-0 w-full h-full z-5 transition-opacity duration-500 hidden group-hover:block">
-        <div className="h-full flex flex-col items-center justify-center w-3/4 m-auto">
+        <div className="h-full flex flex-col items-center justify-center xl:w-3/4 lg:w-3/4 md:w-3/4 sm:w-4/5 xs:4/5 xxs:4/5 m-auto">
           <h2 className="uppercase text-4xl text-white text-center font-bold">
             {data.title}
           </h2>
