@@ -11,12 +11,17 @@ import Footer from "@/components/footer/Footer";
 import { useState, useEffect } from "react";
 import AppBar from "@/components/header/AppBar";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const [showScroll, setShowScroll] = useState(false);
 
   useEffect(() => {
+    AOS.init();
+
     const checkScrollTop = () => {
       if (!showScroll && window.pageYOffset > 0.75 * window.innerHeight) {
         setShowScroll(true);

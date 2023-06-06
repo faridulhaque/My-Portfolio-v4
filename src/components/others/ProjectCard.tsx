@@ -2,11 +2,18 @@ import Image from "next/image";
 import React, { useState } from "react";
 import ProjectDialog from "./ProjectDialog";
 
+
 const ProjectCard = ({ data }: any) => {
   const [isOpen, setOpen] = useState(false);
 
+ 
+
   return (
-    <div className="group w-full xl:h-[300px] lg:h-[300px] md:h-[300px] sm:h-[275px] xs:h-[275px] xxs:h-[275px]  overflow-hidden relative ">
+    <div 
+    data-aos="flip-right"
+    data-aos-easing="ease-out-cubic"
+    data-aos-duration="1000"
+    className="group w-full xl:h-[300px] lg:h-[300px] md:h-[300px] sm:h-[275px] xs:h-[275px] xxs:h-[275px]  overflow-hidden relative ">
       <Image
         src={data?.img}
         width={400}

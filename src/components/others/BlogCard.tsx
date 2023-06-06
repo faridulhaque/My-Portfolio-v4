@@ -3,7 +3,12 @@ import Link from "next/link";
 
 const BlogCard = ({ blog }: any) => {
   return (
-    <div className="bg-[#222222] text-white group w-full xl:h-[600px] lg:h-[600px] md:h-[600px] sm:h-[625px] xs:h-[625px] xxs:h-[625px] overflow-hidden relative shadow-2xl">
+    <div
+      data-aos="fade-up"
+      data-aos-easing="linear"
+      data-aos-duration="1000"
+      className="bg-[#222222] text-white group w-full xl:h-[600px] lg:h-[600px] md:h-[600px] sm:h-[625px] xs:h-[625px] xxs:h-[625px] overflow-hidden relative shadow-2xl"
+    >
       <Image
         className="h-2/4 w-full"
         src={blog?.img}
