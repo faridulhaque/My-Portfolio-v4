@@ -1,7 +1,27 @@
 import Link from "next/link";
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import { AiFillMail, AiFillPhone } from "react-icons/ai";
+import { useForm, ValidationError } from "@formspree/react";
+
 const Contact = () => {
+  const emailjsKey: any = process.env.NEXT_PUBLIC_EMAILJS_KEY;
+
+  const [state, handleSubmit] = useForm(emailjsKey);
+  if (state.succeeded) {
+    return (
+      <div className="w-full py-10 bg-[#333] ">
+        <p className="text-xl text-center text-green-500">
+          Thank you for your participation!{" "}
+        </p>
+        <p className="text-lg text-center w-4/5 mt-3 mx-auto text-green-400">
+          We assure you that we will promptly get in touch with you at the
+          earliest opportunity.
+        </p>
+
+      </div>
+    );
+  }
 
   return (
     <div
@@ -37,7 +57,10 @@ const Contact = () => {
           </ul>
         </div>
 
-        <form className="xl:w-2/4 lg:w-2/4 md:w-2/4 sm:w-11/12 xs:w-11/12 xxs:w-11/12 flex flex-col mx-auto sm:mt-10 xs:mt-10 xxs:mt-10">
+        <form
+          onSubmit={handleSubmit}
+          className="xl:w-2/4 lg:w-2/4 md:w-2/4 sm:w-11/12 xs:w-11/12 xxs:w-11/12 flex flex-col mx-auto sm:mt-10 xs:mt-10 xxs:mt-10"
+        >
           {/* input fields wrapper started*/}
           <div className="w-full grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 xs:grid-cols-1 xxs:grid-cols-1 gap-4 mb-3">
             <div>
@@ -48,6 +71,9 @@ const Contact = () => {
               <input
                 className="w-full h-14 mt-2 outline-none border-none rounded-md bg-[#222222]"
                 type="text"
+                name="name"
+                id="name"
+                required
               />
             </div>
             <div>
@@ -59,6 +85,8 @@ const Contact = () => {
                 className="w-full h-14 mt-2 outline-none border-none rounded-md bg-[#222222]"
                 type="email"
                 required
+                id="email"
+                name="email"
               />
             </div>
           </div>
@@ -71,6 +99,8 @@ const Contact = () => {
             <br />
             <textarea
               required
+              id="message"
+              name="message"
               className="w-full resize-none h-[150px] mt-2 outline-none border-none rounded-md bg-[#222222]"
             />
           </div>

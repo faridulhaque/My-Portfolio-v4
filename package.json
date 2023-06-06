@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@formspree/react": "^2.4.2",
+    "@emailjs/browser": "^3.11.0",
     "@types/aos": "^3.0.4",
     "@types/node": "20.2.5",
     "@types/react": "18.2.7",

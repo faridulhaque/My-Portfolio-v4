@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div id="about" className="bg-[#202020] text-[#FDFDFD] py-20 h-auto">
+    <div id="about" className="bg-[#202020] w-full overflow-hidden text-[#FDFDFD] py-20 h-auto">
       <div
         data-aos="zoom-out"
         data-aos-easing="linear"
