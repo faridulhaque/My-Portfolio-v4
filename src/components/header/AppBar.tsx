@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { ImGithub, ImTwitter, ImLinkedin2 } from "react-icons/im";
 
@@ -10,6 +10,17 @@ const AppBar = () => {
   const navItems = ["home", "portfolio", "blog", "about", "contact"];
 
   const router = useRouter();
+
+  useEffect(() => {
+    if (!openBar) {
+        // setModalInfo(null)
+        document.body.style.overflowY = "scroll"
+
+    }
+    else {
+        document.body.style.overflowY = "hidden"
+    }
+}, [openBar])
 
   return (
     <div
@@ -49,7 +60,7 @@ const AppBar = () => {
               </Link>
             </li>
           ))}
-          <li className="w-full h-[60px] bg-[#333333] flex items-center justify-around ">
+          <li className="w-full h-[60px] bg-[#333333] flex items-center justify-around absolute bottom-0">
             <Link
               href="https://www.linkedin.com/in/faridulhaquemurshed/"
               target="_blank"
