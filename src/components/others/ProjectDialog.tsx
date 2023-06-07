@@ -5,6 +5,7 @@ import { BsGithub, BsGlobe } from "react-icons/bs";
 const ProjectDialog = ({ setOpen, data }: any) => {
   return (
     <div className="w-full h-[100vh] bg-light-black fixed z-10 top-0 left-0">
+   
       <div
         className={`${
           data?.credentials?.email ? "xl:h-[500px] lg:h-[500px] md:h-[525px] sm:h-[525px] xs:h-[600px] xxs:h-[600px]" : "xl:h-[300px] lg:h-[300px] md:h-[325px] sm:h-[325px] xs:h-[400px] xxs:h-[400px]"

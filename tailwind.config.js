@@ -16,15 +16,18 @@ module.exports = {
   theme: {
     extend: {},
     screens: {
-      'xxs': '0',
-      'xs': '600px',
+      'zero': '0px',
+      'xxs': '320px',
+      'xs': '480px',
+      'sm': '640px',
 
-      'sm': '740px',
-
+      'ms': "768px",
       'md': '960px',
+      'ml': '1280px',
 
-      'lg': '1280px',
-      'xl': '1439px'
+      'lg': '1440px',
+      'xl': '1680px',
+      'xxl': '2049px'
 
     },
   },

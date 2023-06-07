@@ -9,7 +9,7 @@ const Navbar = () => {
   const router = useRouter();
 
   return (
-    <div className="w-full h-20 bg-[#090909] xl:flex lg:flex md:flex sm:hidden xs:hidden xxs:hidden">
+    <div className="w-full h-20 bg-[#090909] xl:flex lg:flex ml:flex md:flex ms:hidden sm:hidden xs:hidden xxs:hidden">
       <div className="w-1/4 h-full flex items-center justify-center">
         <Link href="/" className="text-2xl text-white my-logo">
           Faridul Haque Murshed
@@ -24,7 +24,7 @@ const Navbar = () => {
                   router.asPath === "/#" + item
                     ? "text-[#4A8CB3]"
                     : "text-white"
-                } text-2xl capitalize hover:text-[#4A8CB3]`}
+                } xl:text-2xl  lg:text-2xl ml:text-2xl md:text-2xl ms:text-xl sm:text-xl xs:text-xl xxs:text-xl capitalize hover:text-[#4A8CB3]`}
                 href={`#${item}`}
               >
                 {item}
@@ -36,17 +36,17 @@ const Navbar = () => {
       <div className="w-1/4 h-full flex justify-center">
         <ul className="w-8/12 h-full flex items-center justify-evenly">
           <li>
-            <Link href="" target="_blank">
+            <Link href="https://www.linkedin.com/in/faridulhaquemurshed/" target="_blank">
               <ImLinkedin2 className="text-white text-2xl hover:text-[#4A8CB3]"></ImLinkedin2>
             </Link>
           </li>
           <li>
-            <Link href="" target="_blank">
+            <Link href="https://github.com/faridulhaque" target="_blank">
               <ImGithub className="text-white text-2xl hover:text-[#4A8CB3]"></ImGithub>
             </Link>
           </li>
           <li>
-            <Link href="" target="_blank">
+            <Link href="https://twitter.com/FHMurshed" target="_blank">
               <ImTwitter className="text-white text-2xl hover:text-[#4A8CB3]"></ImTwitter>
             </Link>
           </li>

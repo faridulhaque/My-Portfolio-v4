@@ -39,7 +39,8 @@ export default function Home() {
   }, [showScroll]);
 
   return (
-    <div className="relative w-full">
+
+    <div className="relative w-full xl:block lg:block ml:block md:block ms:block sm:block xs:block  xxs:block zero:hidden xxl:hidden">
       <header className="relative w-full h-screen">
         <Navbar></Navbar>
         {/* navbar is for  larger devices and appBar is for smaller devices*/}

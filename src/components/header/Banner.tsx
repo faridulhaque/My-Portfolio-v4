@@ -30,8 +30,8 @@ const Banner = () => {
         Download Resume
       </Link>
 
-      <span className="absolute bottom-10 animate-bounce">
-        <AiOutlineArrowDown className="text-white text-3xl"></AiOutlineArrowDown>
+      <span className="absolute xl:bottom-10 lg:bottom-10 ml:bottom-10 md:bottom-7 ms:bottom-7 sm:bottom-7 xs:bottom-5 xxs:bottom-3  animate-bounce">
+        <AiOutlineArrowDown className="text-white xl:text-3xl lg:text-3xl ml:text-3xl md:text-3xl ms:text-3xl sm:text-xl xs:text-xl xxs:text-xl"></AiOutlineArrowDown>
       </span>
     </div>
   );
