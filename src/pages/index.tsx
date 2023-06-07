@@ -39,34 +39,42 @@ export default function Home() {
   }, [showScroll]);
 
   return (
+    <>
+      {/* this part will be visible in large and smallest screen and will be hidden in normal screen */}
+      <div className="h-screen w-full items-center justify-center xl:hidden lg:hidden ml:hidden md:hidden ms:hidden sm:hidden xs:hidden  xxs:hidden zero:flex xxl:flex">
+        <p className="xxl:text-5xl zero:text-md text-black text-center">
+          Your device is either too small or too large for this website
+        </p>
+      </div>
 
-    <div className="relative w-full xl:block lg:block ml:block md:block ms:block sm:block xs:block  xxs:block zero:hidden xxl:hidden">
-      <header className="relative w-full h-screen">
-        <Navbar></Navbar>
-        {/* navbar is for  larger devices and appBar is for smaller devices*/}
-        <AppBar></AppBar>
-        <Banner></Banner>
-      </header>
+      <div className="relative w-full xl:block lg:block ml:block md:block ms:block sm:block xs:block  xxs:block zero:hidden xxl:hidden">
+        <header className="relative w-full h-screen">
+          <Navbar></Navbar>
+          {/* navbar is for  larger devices and appBar is for smaller devices*/}
+          <AppBar></AppBar>
+          <Banner></Banner>
+        </header>
 
-      <main>
-        <Portfolio></Portfolio>
-        <Blogs></Blogs>
-        <About></About>
-        <Contact></Contact>
-      </main>
-      <footer>
-        <Footer></Footer>
-      </footer>
-      <button
-        onClick={() => {
-          window.scrollTo(0, 0);
-        }}
-        className={`fixed flex items-center justify-center bottom-5 right-5 text-white bg-[#4A8CB3] px-3 py-2 shadow-lg rounded-md text-3xl opacity-3 ${
-          showScroll ? "visible" : "hidden"
-        }`}
-      >
-        ^
-      </button>
-    </div>
+        <main>
+          <Portfolio></Portfolio>
+          <Blogs></Blogs>
+          <About></About>
+          <Contact></Contact>
+        </main>
+        <footer>
+          <Footer></Footer>
+        </footer>
+        <button
+          onClick={() => {
+            window.scrollTo(0, 0);
+          }}
+          className={`fixed flex items-center justify-center bottom-5 right-5 text-white bg-[#4A8CB3] px-3 py-2 shadow-lg rounded-md text-3xl opacity-3 ${
+            showScroll ? "visible" : "hidden"
+          }`}
+        >
+          ^
+        </button>
+      </div>
+    </>
   );
 }
