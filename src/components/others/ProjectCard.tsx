@@ -1,9 +1,37 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import ProjectDialog from "./ProjectDialog";
 
 const ProjectCard = ({ data }: any) => {
   const [isOpen, setOpen] = useState(false);
+  const modalRef:any = useRef()
+
+  const handleClickOutsideModal = (event:any) => {
+    if (modalRef.current && !modalRef.current.contains(event.target)) {
+      setOpen(false);
+    }
+  
+  };
+
+  useEffect(() => {
+    document.addEventListener("click", handleClickOutsideModal, true);
+
+    return () => {
+      document.addEventListener("click", handleClickOutsideModal, true);
+    };
+  }, [modalRef]);
+
+
+  useEffect(() => {
+    if (!isOpen) {
+        // setModalInfo(null)
+        document.body.style.overflowY = "scroll"
+
+    }
+    else {
+        document.body.style.overflowY = "hidden"
+    }
+}, [isOpen])
 
   return (
     <>
@@ -37,7 +65,7 @@ const ProjectCard = ({ data }: any) => {
           </button>
         </div>
       </div>
-      {isOpen && <ProjectDialog setOpen={setOpen} data={data}></ProjectDialog>}
+      {isOpen && <ProjectDialog modalRef={modalRef} setOpen={setOpen} data={data}></ProjectDialog>}
     </>
   );
 };

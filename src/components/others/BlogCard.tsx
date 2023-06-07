@@ -7,7 +7,7 @@ const BlogCard = ({ blog }: any) => {
       data-aos="fade-up"
       data-aos-easing="linear"
       data-aos-duration="1000"
-      className="bg-[#222222] text-white group w-full xl:h-[625px] lg:h-[625px] md:h-[625px] sm:h-[650px] xs:h-[625px] xxs:h-[625px] overflow-hidden relative shadow-2xl"
+      className="bg-[#222222] text-white group w-full xl:h-[625px] lg:h-[625px] ml:h-[625px] md:h-[625px] ms:h-[650px] sm:h-[750px] xs:h-[625px] xxs:h-[625px] overflow-hidden relative shadow-2xl"
     >
       <Image
         className="h-2/4 w-full"

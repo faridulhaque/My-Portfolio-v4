@@ -2,14 +2,16 @@ import Link from "next/link";
 import React from "react";
 import { BsGithub, BsGlobe } from "react-icons/bs";
 
-const ProjectDialog = ({ setOpen, data }: any) => {
+const ProjectDialog = ({ setOpen, data, modalRef }: any) => {
   return (
     <div className="w-full h-[100vh] bg-light-black fixed z-10 top-0 left-0">
-   
       <div
+        ref={modalRef}
         className={`${
-          data?.credentials?.email ? "xl:h-[500px] lg:h-[500px] md:h-[525px] sm:h-[525px] xs:h-[600px] xxs:h-[600px]" : "xl:h-[300px] lg:h-[300px] md:h-[325px] sm:h-[325px] xs:h-[400px] xxs:h-[400px]"
-        } text-white xl:w-2/4 lg:w-2/4 md:w-3/5 sm:4/5 xs:w-11/12  bg-[#333333] rounded-lg absolute z-11 top-0 bottom-0 right-0 left-0 m-auto`}
+          data?.credentials?.email
+            ? "xl:h-[500px] lg:h-[500px] md:h-[525px] sm:h-[525px] xs:h-[600px] xxs:h-[600px]"
+            : "xl:h-[300px] lg:h-[300px] md:h-[325px] sm:h-[325px] xs:h-[400px] xxs:h-[400px]"
+        } text-white xl:w-2/4 lg:w-2/4 md:w-3/5 sm:4/5 xs:w-11/12  bg-[#333333] rounded-lg absolute z-11 top-0 bottom-0 right-0 left-0 m-auto modal-motion`}
       >
         <div className="w-11/12 m-auto mt-3">
           <h2 className="text-4xl text-bold uppercase">{data.title}</h2>

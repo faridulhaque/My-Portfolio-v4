@@ -22,3 +22,19 @@ header {
 .bg-light-black {
     background-color: rgba(0, 0, 0, 0.5);
 }
+
+/* animation for modal in project part */
+.modal-motion {
+    animation: modal-motion 0.5s;
+}
+@keyframes modal-motion {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
