@@ -1,6 +1,5 @@
 import Link from "next/link";
 import React, { useRef } from "react";
-import emailjs from "@emailjs/browser";
 import { AiFillMail, AiFillPhone } from "react-icons/ai";
 import { useForm, ValidationError } from "@formspree/react";
 
