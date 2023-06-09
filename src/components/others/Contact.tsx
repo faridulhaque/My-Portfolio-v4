@@ -6,7 +6,7 @@ import { useForm, ValidationError } from "@formspree/react";
 const Contact = () => {
   const emailjsKey: any = process.env.NEXT_PUBLIC_EMAILJS_KEY;
 
-  const [state, handleSubmit] = useForm(emailjsKey);
+  const [state, handleSubmit] = useForm('xnqykdqr');
   if (state.succeeded) {
     return (
       <div className="w-full py-10 bg-[#333] ">
