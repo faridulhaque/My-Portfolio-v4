@@ -17,14 +17,14 @@ const Banner = () => {
         data-aos="zoom-in"
         data-aos-easing="linear"
         data-aos-duration="1000"
-        className=" xl:text-2xl lg:text-2xl md:text-xl sm:text-xl xs:text-lg xxs:text-lg text-center xl:w-3/4 lg:w-3/4 md:w-3/5 sm:w-3/4 xs:w-11/12 xxs:w-11/12"
+        className="my-3 xl:text-2xl lg:text-2xl md:text-xl sm:text-xl xs:text-lg xxs:text-lg text-center xl:w-3/4 lg:w-3/4 md:w-3/5 sm:w-3/4 xs:w-11/12 xxs:w-11/12"
       >
         I am Faridul Haque Murshed, a passionate MERN stack developer, equipped
         with the skills to create robust and dynamic web applications that
         seamlessly integrate MongoDB, Express.js, React, and Node.js.
       </p>
       <a
-        href="farid_resume.pdf"
+        href="resume_farid.pdf"
         download
         className="btn bg-[#8AC7FF] xl:px-5 lg:px-5 md:px-4 sm:px-3 xs:px-3 xxs:px-3 xl:py-3 lg:py-3 md:py-2 sm:py-2 xs:py-1 xxs:py-1 text-[#333333] rounded-md mt-5"
       >
