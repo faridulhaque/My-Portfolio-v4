@@ -10,7 +10,7 @@ const Portfolio = () => {
   useMemo(() => {
     setLoading(true);
     fetch(
-      "https://raw.githubusercontent.com/faridulhaque/My-json-data/main/portfolio4.json"
+      "https://raw.githubusercontent.com/faridulhaque/faridulhaque/main/portfolio_4/projects.json"
     )
       .then((response) => response.json())
       .then((data) => {

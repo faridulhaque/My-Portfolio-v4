@@ -10,7 +10,7 @@ const Blogs = () => {
   useMemo(() => {
     setLoading(true);
     fetch(
-      "https://raw.githubusercontent.com/faridulhaque/My-json-data/main/portfolio4_blog.json"
+      "https://raw.githubusercontent.com/faridulhaque/faridulhaque/main/portfolio_4/blogs.json"
     )
       .then((res) => res.json())
       .then((data) => {

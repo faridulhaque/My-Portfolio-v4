@@ -17,7 +17,7 @@ const BlogCard = ({ blog }: any) => {
         alt="normal image"
       ></Image>
       <h2 className="text-2xl my-4 mx-3 text-[#8AC7FF]">{blog?.title}</h2>
-      <p className="text-md mx-3 text-justify">{blog.description}</p>
+      <p className="text-md mx-3 text-justify">{blog?.description}</p>
 
       <Link
         href={blog?.blog}

@@ -10,17 +10,20 @@ const Footer = () => {
       </h2>
       <ul className="xl:w-2/12 lg:w-2/12 md:w-1/4 sm:w-2/5 xs:w-3/4 xxs:w-3/5 mt-5 h-auto m-auto flex items-center justify-evenly">
         <li>
-          <Link href="" target="_blank">
+          <Link
+            href="https://www.linkedin.com/in/faridulhaquemurshed/"
+            target="_blank"
+          >
             <ImLinkedin2 className=" text-2xl hover:text-[#4A8CB3]"></ImLinkedin2>
           </Link>
         </li>
         <li>
-          <Link href="" target="_blank">
+          <Link href="https://github.com/faridulhaque" target="_blank">
             <ImGithub className=" text-2xl hover:text-[#4A8CB3]"></ImGithub>
           </Link>
         </li>
         <li>
-          <Link href="" target="_blank">
+          <Link href="https://twitter.com/FHMurshed" target="_blank">
             <ImTwitter className=" text-2xl hover:text-[#4A8CB3]"></ImTwitter>
           </Link>
         </li>
