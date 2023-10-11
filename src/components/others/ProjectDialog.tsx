@@ -20,12 +20,14 @@ const ProjectDialog = ({ setOpen, data, modalRef }: any) => {
           <div className="w-2/5 h-auto flex items-center">
             <Link
               href={data?.live}
+              target="_blank"
               className="mr-4 px-2 py-2 bg-white rounded-full"
             >
               <BsGlobe className="text-2xl text-[#333333]"></BsGlobe>
             </Link>
             <Link
               href={`${data?.git?.client}`}
+              target="_blank"
               className="mr-4 px-2 py-2 bg-white rounded-full"
             >
               <BsGithub className="text-2xl text-[#333333]"></BsGithub>
@@ -33,6 +35,7 @@ const ProjectDialog = ({ setOpen, data, modalRef }: any) => {
             {data?.git?.server && (
               <Link
                 href={`${data?.git?.server}`}
+                target="_blank"
                 className="mr-4 px-2 py-2 bg-white rounded-full"
               >
                 <BsGithub className="text-2xl text-[#333333]"></BsGithub>
