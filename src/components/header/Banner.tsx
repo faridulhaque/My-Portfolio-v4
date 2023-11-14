@@ -24,7 +24,7 @@ const Banner = () => {
         seamlessly integrate MongoDB, Express.js, React, and Node.js.
       </p>
       <a
-        href="Resume_Of_Faridul_Haque_Murshed_MERN_Stack.pdf"
+        href="MERN_Stack_Resume_Of_Faridul_Haque_Murshed.pdf"
         download
         className="btn bg-[#8AC7FF] xl:px-5 lg:px-5 md:px-4 sm:px-3 xs:px-3 xxs:px-3 xl:py-3 lg:py-3 md:py-2 sm:py-2 xs:py-1 xxs:py-1 text-[#333333] rounded-md mt-5"
       >
