@@ -2,22 +2,10 @@ import Loading from "../loading/Loading";
 import BlogCard from "./BlogCard";
 import React, { useMemo, useState } from "react";
 
-const Blogs = () => {
-  const [blogs, setBlogs] = useState<any>([]);
+const Blogs = ({data:blogs}:any) => {
 
   const [loading, setLoading] = useState(false);
 
-  useMemo(() => {
-    setLoading(true);
-    fetch(
-      "https://raw.githubusercontent.com/faridulhaque/faridulhaque/main/portfolio_4/blogs.json"
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        setBlogs(data);
-        setLoading(false);
-      });
-  }, []);
   return (
     <div id="blog" className="h-auto w-full m-auto bg-[#333] py-10">
       <h2 className="w-11/12 m-auto text-5xl text-white my-10">Blogs</h2>

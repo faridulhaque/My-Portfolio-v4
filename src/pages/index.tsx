@@ -16,7 +16,7 @@ import "aos/dist/aos.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export default function Home(props: any) {
   const [showScroll, setShowScroll] = useState(false);
 
   useEffect(() => {
@@ -38,6 +38,9 @@ export default function Home() {
     };
   }, [showScroll]);
 
+
+  
+
   return (
     <>
       {/* this part will be visible in large and smallest screen and will be hidden in normal screen */}
@@ -56,8 +59,8 @@ export default function Home() {
         </header>
 
         <main>
-          <Portfolio></Portfolio>
-          <Blogs></Blogs>
+          <Portfolio data={props?.projects}></Portfolio>
+          <Blogs data={props?.blogs}></Blogs>
           <About></About>
           <Contact></Contact>
         </main>
@@ -77,4 +80,25 @@ export default function Home() {
       </div>
     </>
   );
+}
+
+export async function getServerSideProps() {
+  // Fetch data from the server
+  const response_blog = await fetch(
+    "https://raw.githubusercontent.com/faridulhaque/faridulhaque/main/portfolio_4/blogs.json"
+  );
+  const blogs = await response_blog.json();
+
+  const response_projects = await fetch(
+    "https://raw.githubusercontent.com/faridulhaque/faridulhaque/main/portfolio_4/projects.json"
+  );
+  const projects = await response_projects.json();
+
+  // Return the data as props
+  return {
+    props: {
+      blogs,
+      projects,
+    },
+  };
 }
